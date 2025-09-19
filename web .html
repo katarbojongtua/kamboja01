@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Karang Taruna Bojongtua</title>
+    <meta
+      name="description"
+      content="Website resmi Karang Taruna - wadah kreativitas dan pengabdian generasi muda."
+    />
+    <style>
+      :root {
+        --primary: #0f4c81;
+        --secondary: #fbbf24;
+        --light: #f9fafb;
+        --dark: #111827;
+        --muted: #6b7280;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        color: var(--dark);
+        background: var(--light);
+        line-height: 1.6;
+      }
+
+      nav {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        background: white;
+        padding: 0.8rem;
+        border-bottom: 1px solid #e5e7eb;
+        position: sticky;
+        top: 0;
+      }
+      nav a {
+        color: var(--dark);
+        text-decoration: none;
+        font-weight: 500;
+      }
+      nav a:hover {
+        color: var(--primary);
+      }
+
+      .hero {
+        padding: 3rem 1rem;
+        text-align: center;
+      }
+      .hero h2 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+      .hero p {
+        color: var(--muted);
+        max-width: 600px;
+        margin: 0 auto 1rem;
+      }
+      .hero .btn {
+        display: inline-block;
+        background: var(--secondary);
+        color: var(--dark);
+        padding: 0.7rem 1.2rem;
+        border-radius: 0.5rem;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+        padding: 2rem 1rem;
+        max-width: 1000px;
+        margin: auto;
+      }
+      .card {
+        background: white;
+        border-radius: 0.8rem;
+        padding: 1rem;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+      .card h3 {
+        margin: 0.5rem 0;
+        color: var(--primary);
+      }
+      .card p {
+        color: var(--muted);
+      }
+
+      .agenda {
+        background: #f3f4f6;
+        padding: 2rem 1rem;
+        text-align: center;
+      }
+      .agenda h2 {
+        color: var(--primary);
+      }
+
+      footer {
+        background: var(--primary);
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        margin-top: 2rem;
+      }
+      /* ...atur gambar logo ditengah... */
+      .gambar-tengah {
+        display: block;
+        margin: 0 auto 1rem auto;
+        max-width: 220px;
+        height: auto;
+      }
+      /* ...warna bg hubungi kami... */
+      header {
+        background: linear-gradient(135deg, var(--primary), #2563eb),
+          url("bg.jpg") center/cover no-repeat;
+        color: white;
+        padding: 2rem 1rem;
+        text-align: center;
+      }
+      /* ...resolusi video... */
+      .full-video {
+        display: block;
+        width: 80vw;
+        height: 60vh;
+        object-fit: cover;
+        margin: 0 auto 1.5rem auto;
+        border-radius: 0;
+      }
+      .full-video {
+        display: block;
+        width: 100%;
+        max-width: 900px;
+        height: auto;
+        object-fit: contain;
+        margin: 0 auto 1.5rem auto;
+        border-radius: 12px;
+      }
+      /* foto agenda */
+      .agenda-slider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 600px;
+        margin: 0 auto 2rem auto;
+        position: relative;
+        overflow: hidden;
+      }
+      .agenda-slides {
+        display: flex;
+        transition: transform 0.4s;
+        width: 100%;
+        max-width: 420px;
+      }
+      .agenda-item {
+        min-width: 100%;
+        background: #fff;
+        padding: 18px 18px;
+        border-radius: 12px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .agenda-foto-group {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        margin-bottom: 12px;
+        background: #fff;
+        padding: 16px 12px;
+        border-radius: 12px;
+        width: fit-content;
+        max-width: 100%;
+      }
+      .agenda-foto-group img {
+        flex: 1 1 0;
+        width: 200px;
+        max-width: 100%;
+        height: 130px;
+        object-fit: cover;
+        border-radius: 8px;
+        display: block;
+      }
+      .agenda-info {
+        text-align: center;
+        font-size: 16px;
+        color: #0f4c81;
+      }
+      .agenda-info span {
+        color: #333;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="top">
+      <img src="img/logo1.png" alt="Logo Karang Taruna" class="gambar-tengah" />
+      <h1>Karang Taruna Desa Bojongtua</h1>
+      <p>Wadah kreativitas, pengabdian, dan kebersamaan generasi muda</p>
+    </header>
+
+    <nav>
+      <a href="#top">Beranda</a>
+      <a href="#tentangkami">Tentang Kami</a>
+      <a href="#kegiatan">Kegiatan</a>
+      <a href="#kontak">Hubungi Kami</a>
+    </nav>
+
+    <section class="hero" id="beranda">
+      <h2>Selamat Datang di Website Karang Taruna Bojongtua RT 001 RW 001</h2>
+      <video src="img/17an.mp4" autoplay loop muted class="full-video"></video>
+      <p>
+        Karang Taruna Desa Bojongtua adalah organisasi sosial kepemudaan yang
+        berperan sebagai wadah pengembangan generasi muda di lingkungan RT 001
+        RW 001. Kami hadir untuk membangun karakter, kreativitas, dan kepedulian
+        sosial pemuda demi kemajuan masyarakat.
+      </p>
+      <a href="#tentangkami" class="btn">Pelajari Lebih Lanjut</a>
+    </section>
+
+    <section class="features" id="tentangkami">
+      <div class="card">
+        <h3>Visi</h3>
+        <p>
+          Mewujudkan pemuda yang mandiri, berkarakter, dan peduli lingkungan.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Misi</h3>
+        <p>
+          Meningkatkan kreativitas, mempererat persaudaraan, dan memberikan
+          kontribusi nyata bagi masyarakat.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Struktur Organisasi</h3>
+        <p>
+          Dipimpin oleh Ketua, Sekretaris, Bendahara, dan beberapa bidang
+          seperti seksi perlengkapan, seksi humas, seksi acara, dan seksi
+          keamanan. Setiap anggota aktif dalam setiap kegiatan dan program
+          kerja.
+        </p>
+      </div>
+    </section>
+
+    <section class="agenda" id="kegiatan">
+      <h2>Agenda Kegiatan Terbaru</h2>
+      <div class="agenda-slider">
+        <div class="agenda-slides">
+          <div class="agenda-item">
+            <div class="agenda-foto-group">
+              <img src="img/tasya.jpg" alt="Malam Tasyakuran 1" />
+              <img src="img/tasya2.jpg" alt="Malam Tasyakuran 2" />
+            </div>
+            <div class="agenda-info">
+              <strong>Malam Tasyakuran</strong><br />
+              <span>16 Agustus 2025</span>
+            </div>
+          </div>
+          <div class="agenda-item">
+            <div class="agenda-foto-group">
+              <img src="img/17an2.jpg" alt="Perlombaan 1" />
+              <img src="img/17an3.jpg" alt="Perlombaan 2" />
+            </div>
+            <div class="agenda-info">
+              <strong>Perlombaan</strong><br />
+              <span>17 Agustus 2025</span>
+            </div>
+          </div>
+          <div class="agenda-item">
+            <div class="agenda-foto-group">
+              <img src="img/malam.jpg" alt="Pembubaran Panitia 1" />
+              <img src="img/malam3.jpg" alt="Pembubaran Panitia 3" />
+            </div>
+            <div class="agenda-info">
+              <strong>Malam Puncak</strong><br />
+              <span>30 Agustus 2025</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tambahkan di bawah sebelum </body> -->
+    <script>
+      const slides = document.querySelectorAll(".agenda-item");
+      const slidesContainer = document.querySelector(".agenda-slides");
+      let currentSlide = 0;
+
+      function showSlide(idx) {
+        slidesContainer.style.transform = `translateX(-${idx * 100}%)`;
+      }
+
+      function autoSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      }
+      setInterval(autoSlide, 3000); // Ganti slide tiap 3 detik
+
+      // Inisialisasi posisi awal
+      showSlide(currentSlide);
+    </script>
+
+    <footer>
+      <div
+        id="kontak"
+        style="
+          background-color: #1b8ef2;
+          color: white;
+          padding: 32px 20px;
+          text-align: left;
+          border-radius: 0 0 12px 12px;
+        "
+      >
+        <h3 style="margin-top: 0">Hubungi Kami</h3>
+        <p><strong>Telp:</strong> 0896-3720-2636</p>
+        <p><strong>Email:</strong> wahyudifajar434@gmail.com</p>
+        <p>
+          <strong>Alamat:</strong> Jl. H. Gani Bojongtua, RT.001/RW.001,
+          Jatimakmur, Kec. Pd. Gede, Kota Bks, Jawa Barat 17413
+        </p>
+        <p style="margin-top: 24px">
+          © 2025 Karang Taruna Desa Sejahtera. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

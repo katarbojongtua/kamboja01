@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <section id="kegiatan" style="padding: 40px; font-family: Arial, sans-serif">
+    <div style="max-width: 1000px; margin: auto; text-align: center">
+      <h2 style="color: #007acc; margin-bottom: 30px">
+        Kegiatan Karang Taruna RT 001 RW 001
+      </h2>
+
+      <div class="galeri">
+        <div class="foto">
+          <img src="img/tasya.jpg" alt="Kerja Bakti" />
+          <img src="img/tasya2.jpg" alt="Olahraga Bersama" />
+          <p>Malam tasyakuran</p>
+        </div>
+        <div class="foto">
+          <img src="img/17an2.jpg" alt="Olahraga Bersama" />
+          <img src="img/17an3.jpg" alt="Olahraga Bersama" />
+          <p>Lomba 17 Agustus</p>
+        </div>
+        <div class="foto">
+          <img src="img/malam1.jpg" alt="Pentas Seni" />
+          <img src="img/malam.jpg" alt="Pentas Seni" />          
+          <img src="img/malam3.jpg" alt="Pentas Seni" />
+          <p>Malam Puncak</p>
+        </div>
+    </div>
+  </section>
+
+  <style>
+    .galeri .foto p {
+  padding: 10px;
+  margin: 0;
+  font-size: 14px;
+  color: #007acc; /* warna biru */
+  background: #f2f2f2;
+  font-weight: bold;
+}
+    .galeri {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .galeri .foto {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .galeri .foto:hover {
+      transform: scale(1.05);
+    }
+
+    .galeri img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .galeri p {
+      padding: 10px;
+      margin: 0;
+      font-size: 14px;
+      color: #333;
+      background: #f2f2f2;
+    }
+  </style>
+</html>
